@@ -1,0 +1,1 @@
+<?php cfg_Save();
