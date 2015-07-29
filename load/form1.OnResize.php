@@ -1,0 +1,38 @@
+<?php global $name;
+c("memo1")->x = c("shape2")->x + c("shape2")->w;
+c("memo1")->w = c("Form1")->w - c("memo1")->x  - (c("Form1")->w - c("shape3")->x);
+c("memo1")->h = c("Form1")->h-50 - (c("Form1")->h - c("panel4")->y);
+c("pages2")->w = c("shape2")->x;
+c("shape1")->w = c("pages2")->w;
+c("html")->w = c("pages2")->w - 10;
+c("spButton22")->x = c("shape2")->x - 23;
+c("richEdit1")->w = c("html")->w;
+global $name,$coders;
+c("Form1")->caption = "$name - KeyPad+";
+$Len = strlen(c("memo1")->text);
+$lines = c("memo1")->items->count + 1;
+c("panel1")->text = " lenght : $Len  lines: $lines";
+c("panel2")->text =  " col : ".c("memo1")->caretX."  sel : ".strlen(c("memo1")->selText);
+c("panel3")->text = " $coders";
+if(c("shape2")->x < 0)
+c("label8")->visible = false;
+else
+c("label8")->visible = true;
+c("pages1")->x = c("memo1")->x;
+c("pages1")->w = c("memo1")->w;
+c("pages3")->x = c("shape3")->x + 11;
+c("pages3")->w = c("Form1")->w - (c("shape3")->x + 11)- 17;
+c("tmemo1")->x = c("shape3")->x + 11;
+c("tmemo1")->w = c("Form1")->w - (c("shape3")->x + 11)- 17;
+c("tmemo1")->h = c("memo1")->h;
+$x = c("pages1")->pageIndex + 1;
+$x1 = c("pages3")->pageIndex + 1;
+c("memo$x")->w = c("memo1")->w;
+c("memo$x")->h = c("memo1")->h;
+c("memo$x")->x = c("memo1")->x;
+c("tmemo$x1")->w = c("tmemo1")->w;
+c("tmemo$x1")->h = c("tmemo1")->h;
+c("tmemo$x1")->x = c("tmemo1")->x;
+c("Project")->w = c("html")->w;
+c("Project")->h = c("html")->h;
+c("timer5")->enable = true;
