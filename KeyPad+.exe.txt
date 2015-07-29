@@ -4,7 +4,7 @@ interface
 
 uses
   ShellAPI, Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, jpeg, ExtCtrls, StdCtrls;
+  Dialogs, ExtCtrls, StdCtrls;
 
 type
   TForm1 = class(TForm)
