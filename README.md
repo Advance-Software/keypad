@@ -1,1 +1,12 @@
-Keypad+ - is a text editor with syntax support for various programming languages. Written in PHP, for the operating system Windows.
+KeyPad+ 5.4.5
+Copyright © 2014 - 2015 Advance. All rights reserved. 
+Authors:
+Karen Grigoryan
+Dmitry Kirzhaev
+
+This product is distributed free of charge.  
+          
+Thank so much:
+
+xSnakes, Странник, Devel, vGhost, Карпатов Олег, Tweetgo    
+and many other forum members: community.develstudio.ru                                                                      
