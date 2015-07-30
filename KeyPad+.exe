@@ -1,3 +1,4 @@
+//Launching of program itself. It is written in Delphi
 unit Unit1;
 
 interface
