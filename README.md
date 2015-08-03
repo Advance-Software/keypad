@@ -1,4 +1,4 @@
-KeyPad+ 5.4.5
+KeyPad+
 Copyright © 2014 - 2015 Advance. All rights reserved. 
 Authors:
 Karen Grigoryan
