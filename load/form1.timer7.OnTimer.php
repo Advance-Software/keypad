@@ -6,6 +6,9 @@ if(c("bufer")->caption != $data){
 c("bufer")->caption = clipboard_getText();
 c("listBox4")->text = $data;
 c("listBox4")->itemIndex = 0;
+if(c("listBox4")->items->selected == "")
+return;
+else{
 c("listBox3")->items->add(c("listBox4")->items->selected);
 c("map->listBox3")->text = c("listBox3")->text;
 $nb = c("listBox3")->items->count-1;
@@ -15,20 +18,21 @@ $obj->name = "buf".$nb;
 $obj->text = c("bufer")->caption;
 $obj->visible = false;
 }
+}
 c("memo1")->x = c("shape2")->x + c("shape2")->w;
-c("memo1")->w = c("Form1")->w - c("memo1")->x  - (c("Form1")->w - c("shape3")->x);
+c("memo1")->w = c("image35")->w - c("memo1")->x  - (c("image35")->w - c("shape3")->x);
 c("memo1")->h = c("Form1")->h-50 - (c("Form1")->h - c("panel4")->y);
 c("pages2")->w = c("shape2")->x;
 c("shape1")->w = c("pages2")->w;
 c("html")->w = c("pages2")->w - 10;
 c("spButton22")->x = c("shape2")->x - 23;
 c("richEdit1")->w = c("html")->w;
-c("pages3")->x = c("shape3")->x + 11;
-c("pages3")->w = c("Form1")->w - (c("shape3")->x + 11)- 17;
-c("tmemo1")->x = c("shape3")->x + 11;
-c("tmemo1")->w = c("Form1")->w - (c("shape3")->x + 11)- 17;
+c("pages3")->x = c("shape3")->x + 13;
+c("pages3")->w = c("image35")->w - (c("shape3")->x + 13);
+c("tmemo1")->x = c("shape3")->x + 13;
+c("tmemo1")->w = c("image35")->w - (c("shape3")->x + 13);
 c("tmemo1")->h = c("memo1")->h;
-if(c("shape3")->x == c("Form1")->w-17)
+if(c("shape3")->x == c("image35")->w)
 c("shape3")->visible = false;
 else
 c("shape3")->visible = true;
@@ -50,9 +54,3 @@ c("memo$x")->x = c("memo1")->x;
 c("tmemo$x1")->w = c("tmemo1")->w;
 c("tmemo$x1")->h = c("tmemo1")->h;
 c("tmemo$x1")->x = c("tmemo1")->x;
-if(c("num")->items->count == 1 and c("controltab")->caption == 1 and c("shape3")->x != c("Form1")->w - 17){
-c("image1")->visible = true;
-}
-else{
-c("image1")->visible = false;
-}
