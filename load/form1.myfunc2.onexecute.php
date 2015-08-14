@@ -481,7 +481,7 @@ $namet = "tmemo";
 c("$namet$x")->selText = date("H:i")." ".date("d:m:y");
         }break;
 case 'hpage': {
-run("http://keypad.ucoz.org/");
+run("http://keypad-plus.16mb.com/");
 }break;
 case 'pssf': {
 run("https://sourceforge.net/projects/keypadproject/?source=updater");
@@ -491,7 +491,7 @@ global $screenspy;
 $screenspy = 1;
 c("Form1")->borderStyle = bsSizeable;
 if(c("controltab")->caption == 1){
-if(c("shape3")->x == c("Form1")->w - 17){
+if(c("shape3")->x == c("image35")->w){
 c("controltab")->caption = 2;
 c("shape3")->x = c("Form1")->w/2;
 $x = c("pages1")->pageIndex + 1;
@@ -569,7 +569,7 @@ global $screenspy;
 $screenspy = 1;
 c("Form1")->borderStyle = bsSizeable;
 if(c("controltab")->caption == 1){
-if(c("shape3")->x == c("Form1")->w - 17){
+if(c("shape3")->x == c("image35")->w){
 c("controltab")->caption = 2;
 c("shape3")->x = c("Form1")->w/2;
 $x = c("pages1")->pageIndex + 1;
@@ -653,8 +653,9 @@ myFunc9();
 }
 c("close")->caption = $dataclose;
     }break;
-    case 'help': {
-pre("dd");
+    case 'speccase': {
+c("special")->show();
     }break;
 }
+///////////////////////////////
 c("timer5")->enable = true;
