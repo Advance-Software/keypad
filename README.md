@@ -8,5 +8,5 @@ This product is distributed free of charge.
           
 Thank so much:
 
-xSnakes, Странник, Devel, vGhost, Карпатов Олег, Tweetgo    
+xSnakes, Странник, Devel, vGhost, Карпатов Олег, Tweetgo, Senchick, Xoren   
 and many other forum members: community.develstudio.ru                                                                      
