@@ -657,5 +657,4 @@ c("close")->caption = $dataclose;
 c("special")->show();
     }break;
 }
-///////////////////////////////
 c("timer5")->enable = true;
