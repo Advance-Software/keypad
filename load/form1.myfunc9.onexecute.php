@@ -4,6 +4,7 @@ if(c("listBox1")->itemIndex == c("listBox1")->items->count-1){
 $item = c("pages1")->pageIndex;
 $x = c("pages1")->pageIndex + 1;
 $filename = c("fn$x")->caption;
+pre(strlen($filename));
 c("listBox5")->text = "$filename\r\n".c("listBox5")->text;
 $data = c("l$x")->caption;
 $x = c("pages1")->pageIndex + 1;
@@ -63,7 +64,7 @@ c("listBox5")->text = "$filename\r\n".c("listBox5")->text;
 c("buder")->text = c("pages3")->pagesList;
 if(c("buder")->items->count == 1){
 c("controltab")->caption = 1;
-c("shape3")->x = c("Form1")->w - 17;
+c("shape3")->x = c("image35")->w;
 c("buder")->text = "";
 }
 else{
@@ -95,7 +96,8 @@ c("memo$x")->h = c("memo1")->h;
 c("tmemo$x1")->w = c("tmemo1")->w;
 c("tmemo$x1")->h = c("tmemo1")->h;
 c("tmemo$x1")->x = c("tmemo1")->x;
-c("listBox2")->items->delete($item);
+c("tlistBox2")->items->delete($item);
+c("tnum")->items->delete(c("tlistBox1")->items->count);
 c("tcoders")->items->delete(c("pages3")->pageIndex);
 c("tfiles")->items->delete(c("tlistBox1")->items->count);
 c("tfiles")->items->delete(c("tlistBox1")->items->count);
@@ -104,6 +106,7 @@ else{
 c("spButton4")->enabled = false;
 $x = c("pages3")->pageIndex + 1;
 $filename = c("tfn$x")->caption;
+if($filename != "-")
 c("listBox5")->text = "$filename\r\n".c("listBox5")->text;
 $data = c("tl$x")->caption;
 c("tc$x")->free();
