@@ -217,7 +217,72 @@ $namet = "tmemo";
 }
     c("$namet$x")->selText = base64_decode(c("$namet$x")->selText);
         }break;
+    case 'it_string_up': {
+if(c("controltab")->caption == 1){
+$x = c("pages1")->pageIndex + 1;
+$namet = "memo";
+}
+if(c("controltab")->caption == 2){
+$x = c("pages3")->pageIndex + 1;
+$namet = "tmemo";
+}
+$data1 = c("buder")->text;
+c("buder")->text = c("$namet$x")->text;
+c("buder")->itemIndex = c("$namet$x")->caretY-1;
+$i = c("buder")->itemIndex;
 
+if($i > 0){
+ global $list;
+ $arr = explode(_BR_, c("buder")->text);
+ $v1 = $arr[$i];
+ $v2 = $arr[$i-1];
+ $arr[$i-1] = $v1;
+ $arr[$i] = $v2;
+ c("buder")->text = implode(_BR_, $arr);
+ c("buder")->itemIndex = $i-1;
+
+ $v1 = $list[$i];
+ $v2 = $list[$i-1];
+ $list[$i-1] = $v1;
+ $list[$i] = $v2;
+}
+c("$namet$x")->text = c("buder")->text;
+c("$namet$x")->caretY = c("buder")->itemIndex+1;
+c("buder")->text = $data1;
+    }break;
+    case 'it_string_down': {
+if(c("controltab")->caption == 1){
+$x = c("pages1")->pageIndex + 1;
+$namet = "memo";
+}
+if(c("controltab")->caption == 2){
+$x = c("pages3")->pageIndex + 1;
+$namet = "tmemo";
+}
+$data1 = c("buder")->text;
+c("buder")->text = c("$namet$x")->text;
+c("buder")->itemIndex = c("$namet$x")->caretY-1;
+$i = c("buder")->itemIndex;
+
+if($i > 0){
+ global $list;
+ $arr = explode(_BR_, c("buder")->text);
+ $v1 = $arr[$i];
+ $v2 = $arr[$i+1];
+ $arr[$i+1] = $v1;
+ $arr[$i] = $v2;
+ c("buder")->text = implode(_BR_, $arr);
+ c("buder")->itemIndex = $i+1;
+
+ $v1 = $list[$i];
+ $v2 = $list[$i+1];
+ $list[$i+1] = $v1;
+ $list[$i] = $v2;
+}
+c("$namet$x")->text = c("buder")->text;
+c("$namet$x")->caretY = c("buder")->itemIndex+1;
+c("buder")->text = $data1;
+    }break;
     case 'cw': {
 if(c("controltab")->caption == 1){
 $x = c("pages1")->pageIndex + 1;
@@ -232,6 +297,24 @@ c("buder")->text = c("$namet$x")->text;
 c("buder")->itemIndex = c("$namet$x")->caretY-1;
 clipboard_settext(c("buder")->items->selected);
 c("$namet$x")->items->delete(c("buder")->itemindex);
+c("$namet$x")->caretY = c("buder")->itemIndex+1;
+c("buder")->text = $data1;
+    }break;
+    case 'it_cw': {
+if(c("controltab")->caption == 1){
+$x = c("pages1")->pageIndex + 1;
+$namet = "memo";
+}
+if(c("controltab")->caption == 2){
+$x = c("pages3")->pageIndex + 1;
+$namet = "tmemo";
+}
+$data1 = c("buder")->text;
+c("buder")->text = c("$namet$x")->text;
+c("buder")->itemIndex = c("$namet$x")->caretY-1;
+clipboard_settext(c("buder")->items->selected);
+c("$namet$x")->items->delete(c("buder")->itemindex);
+c("$namet$x")->caretY = c("buder")->itemIndex+1;
 c("buder")->text = $data1;
     }break;
     case 'cts':{
@@ -247,6 +330,23 @@ $data1 = c("buder")->text;
 c("buder")->text = c("$namet$x")->text;
 c("buder")->itemIndex = c("$namet$x")->caretY-1;
 clipboard_settext(c("buder")->items->selected);
+c("$namet$x")->caretY = c("buder")->itemIndex+1;
+c("buder")->text = $data1;
+    }break;
+    case 'it_cts':{
+    if(c("controltab")->caption == 1){
+$x = c("pages1")->pageIndex + 1;
+$namet = "memo";
+}
+if(c("controltab")->caption == 2){
+$x = c("pages3")->pageIndex + 1;
+$namet = "tmemo";
+}
+$data1 = c("buder")->text;
+c("buder")->text = c("$namet$x")->text;
+c("buder")->itemIndex = c("$namet$x")->caretY-1;
+clipboard_settext(c("buder")->items->selected);
+c("$namet$x")->caretY = c("buder")->itemIndex+1;
 c("buder")->text = $data1;
     }break;
     case 'delit': {
@@ -262,6 +362,23 @@ $data1 = c("buder")->text;
 c("buder")->text = c("$namet$x")->text;
 c("buder")->itemIndex = c("$namet$x")->caretY-1;
 c("$namet$x")->items->delete(c("buder")->itemindex);
+c("$namet$x")->caretY = c("buder")->itemIndex+1;
+c("buder")->text = $data1;
+    }break;
+    case 'it_delit': {
+    if(c("controltab")->caption == 1){
+$x = c("pages1")->pageIndex + 1;
+$namet = "memo";
+}
+if(c("controltab")->caption == 2){
+$x = c("pages3")->pageIndex + 1;
+$namet = "tmemo";
+}
+$data1 = c("buder")->text;
+c("buder")->text = c("$namet$x")->text;
+c("buder")->itemIndex = c("$namet$x")->caretY-1;
+c("$namet$x")->items->delete(c("buder")->itemindex);
+c("$namet$x")->caretY = c("buder")->itemIndex+1;
 c("buder")->text = $data1;
     }break;
     case 'it_copy': {
@@ -655,6 +772,17 @@ c("close")->caption = $dataclose;
     }break;
     case 'speccase': {
 c("special")->show();
+    }break;
+    case 'it_tab': {
+if(c("Form1->controltab")->caption == 1){
+$x = c("Form1->pages1")->pageIndex + 1;
+$namet = "memo";
+}
+if(c("Form1->controltab")->caption == 2){
+$x = c("Form1->pages3")->pageIndex + 1;
+$namet = "tmemo";
+}
+c("$namet$x")->selText = "	";
     }break;
 }
 c("timer5")->enable = true;
